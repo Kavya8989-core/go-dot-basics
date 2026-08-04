@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b7uk11cmh6mgj"]
+
+[ext_resource type="Texture2D" uid="uid://d0v5vapwj2sll" path="res://Idle (32x32).png" id="1_quqdp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xkw5w"]
+radius = 40.0
+height = 104.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=795882046]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713123628]
+texture_filter = 1
+position = Vector2(33.5, 47.5)
+scale = Vector2(3.5769231, 3.96875)
+texture = ExtResource("1_quqdp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=87840056]
+position = Vector2(34, 57)
+shape = SubResource("CapsuleShape2D_xkw5w")
