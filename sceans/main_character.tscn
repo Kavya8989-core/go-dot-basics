@@ -2,18 +2,19 @@
 
 [ext_resource type="Texture2D" uid="uid://d0v5vapwj2sll" path="res://Idle (32x32).png" id="1_quqdp"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xkw5w"]
-radius = 40.0
-height = 104.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sdby"]
+size = Vector2(21.030304, 26.380953)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=795882046]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1153147291]
+scale = Vector2(3, 3)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713123628]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=195128420]
 texture_filter = 1
-position = Vector2(33.5, 47.5)
-scale = Vector2(3.5769231, 3.96875)
+position = Vector2(6.666667, 8.666667)
+scale = Vector2(0.84615386, 0.875)
 texture = ExtResource("1_quqdp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=87840056]
-position = Vector2(34, 57)
-shape = SubResource("CapsuleShape2D_xkw5w")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=664791284]
+position = Vector2(7.102565, 11.458334)
+scale = Vector2(0.8461539, 0.875)
+shape = SubResource("RectangleShape2D_1sdby")
