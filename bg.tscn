@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://miq4bc0gascl"]
 
-[ext_resource type="Texture2D" uid="uid://c235nbkkcsxtu" path="res://Green.png" id="1_t4gw0"]
+[ext_resource type="Texture2D" uid="uid://dtxq73455o66u" path="res://sceans/_ (1).jpeg" id="1_t4gw0"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" unique_id=1696283678]
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=54287788]
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=937012935]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(1000, 1080)
+repeat_times = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1243939862]
-position = Vector2(371.5, 222.5)
-scale = Vector2(11.640625, 6.984375)
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1421939823]
+texture_filter = 1
+position = Vector2(0.1, 0)
+scale = Vector2(1.5582881, 1.3217924)
 texture = ExtResource("1_t4gw0")
+centered = false

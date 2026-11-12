@@ -210,8 +210,3 @@ script = ExtResource("3_fsb74")
 position = Vector2(7.102565, 11.458334)
 scale = Vector2(0.8461539, 0.875)
 shape = SubResource("RectangleShape2D_1sdby")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1590124429]
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-drag_horizontal_enabled = true
