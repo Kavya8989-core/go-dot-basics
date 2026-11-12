@@ -4,9 +4,20 @@ extends CharacterBody2D
 const SPEED = 200.0
 const JUMP_VELOCITY = -700.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+var is_moving = false
+var mouse_pos :Vector2
 
 
 func _physics_process(delta: float) -> void:
+	
+	if is_moving:
+		sprite_2d.animation = "running"
+		var direction = global_position.direction_to(mouse_pos)
+		velocity = direction * SPEED
+		if global_position.distance_to(mouse_pos) < 5:
+			velocity = Vector2.ZERO
+			sprite_2d.animation="default"
+	
 	if not is_on_floor():
 		sprite_2d.animation="jump"
 	elif(velocity.x> 1 or velocity.x< -1):
@@ -37,4 +48,15 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x > 0:
 		sprite_2d.flip_h = false
 	
-	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			mouse_pos = get_local_mouse_position()
+			print(mouse_pos)
+			is_moving = true
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			mouse_pos = get_local_mouse_position()
+			print(mouse_pos)
+			is_moving = true
+		else:
+			is_moving = false
